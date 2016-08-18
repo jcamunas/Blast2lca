@@ -14,8 +14,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/emepyc/Blast2lca/blastm8"
-	"github.com/emepyc/Blast2lca/taxonomy"
+	"github.com/jcamunas/Blast2lca/blastm8"
+	"github.com/jcamunas/Blast2lca/taxonomy"
 )
 
 const VERSION = 0.8
