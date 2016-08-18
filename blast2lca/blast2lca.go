@@ -125,7 +125,7 @@ func bl2lca(BlastChan <-chan *blastm8.BlastBlock, taxDB *taxonomy.Taxonomy, levs
 				// log.Printf("%s", queryRec.Query)
 				msg := fmt.Sprintf("%s\t%s\t%s\t%s\n", queryRec.Query, lcaNode.Name, lcaNode.Taxon, allLevs)
 				// fmt.Print(msg)
-				printf(msg);
+				printf(msg)
 				outResChan <- msg
 			} else {
 				close(outResChan)
