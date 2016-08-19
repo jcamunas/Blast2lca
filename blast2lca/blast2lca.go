@@ -103,7 +103,7 @@ func bl2lca(BlastChan <-chan *blastm8.BlastBlock, taxDB *taxonomy.Taxonomy, levs
 				taxids := make([]int, 0, len(queryRec.Hits))
 				for _, gibs := range queryRec.Hits {
 					taxid, err := taxDB.TaxidFromGi(gibs.GI())
-					msg2 := fmt.Sprintf("%s\t%s", queryRec.Query, taxid)
+					msg2 := fmt.Sprintf("%s\t%d", queryRec.Query, taxid)
 					printf(msg2)
 					if err != nil {
 						log.Printf("WARNING: Taxid can't be retrieved from %d -- Ignoring this record\n", gibs.GI())
